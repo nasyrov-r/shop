@@ -4,6 +4,6 @@
 
 1. Clone this to your working folder
 
-2. run in console `npm i && bower i`
+2. run in console `npm start`
 
 3. `gulp`
