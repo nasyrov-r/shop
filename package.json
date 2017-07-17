@@ -4,7 +4,8 @@
   "description": "Simple boilerplate Gulp + Rigger + Sass + Foundation + BrowserSync",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm i && bower i"
   },
   "author": "Amir Gafurov <gafurovamir@gmail.com>",
   "license": "ISC",
