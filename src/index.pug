@@ -7,9 +7,15 @@ html
     include pug/metatags.pug
     +title('Главная')
     include pug/styles.pug
-  body
+  body.site-container
+    include pug/includes/header.pug
+    include pug/pages/home.pug
+    include pug/includes/footer.pug
+    
     include pug/svg.pug
-
+      
+      
+      
     //- Code here
 
 

@@ -1,0 +1,17 @@
+// page HEADER
+
+- var socials = ['twitter', 'facebook', 'google-plus', 'instagram']
+
+header.p-header
+  div.h-top.container.clearfix
+    div.h-top__left.float-left
+      a.text-icon.text-icon--mail(href="#") info@shopy.com
+      a.text-icon.text-icon--phone(href="#") 996 - 5553 - 453
+    div.h-top__right.social.float-right
+      each val in socials
+        a.social__link(href="#")
+          i.fa(class='fa-'+ val  aria-hidden="true")
+        
+      
+  div.h-bottom.container
+

@@ -1,0 +1,22 @@
+.text-icon
+  display: inline-block
+  padding-right: 20px
+  vertical-align: top
+  line-height: 1
+  
+  &:last-of-type
+    padding-right: 0px
+  
+  &::before
+    content: ''
+    display: inline-block
+    margin-right: 9px
+    vertical-align: top
+  
+  &--mail::before
+    @extend .icon-mail-ico
+    margin-top: 1px
+  
+  &--phone::before
+    @extend .icon-phone
+    // margin-top: 3px

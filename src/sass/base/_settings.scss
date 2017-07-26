@@ -46,7 +46,50 @@
 
 // 0. FontFaces
 
-$font-family-main: 'Helvetica Neue', Helvetica, Roboto, Arial, sans-serif;
+@font-face {
+  font-family: "HarmoniaSansProCyr-Black";
+  src: url("../fonts/HarmoniaSansProCyr-Black.otf");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "HarmoniaSansProCyr-Bold";
+  src: url("../fonts/HarmoniaSansProCyr-Bold.otf");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "HarmoniaSansProCyr-Italic";
+  src: url("../fonts/HarmoniaSansProCyr-Italic.otf");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "HarmoniaSansProCyr-Light";
+  src: url("../fonts/HarmoniaSansProCyr-Light.otf");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "HarmoniaSansProCyr-Regular";
+  src: url("../fonts/HarmoniaSansProCyr-Regular.otf");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "HarmoniaSansProCyr-SemiBd";
+  src: url("../fonts/HarmoniaSansProCyr-SemiBd.otf");
+  font-style: normal;
+  font-weight: normal;
+}
+
+$font-family-main: 'HarmoniaSansProCyr-Regular', Helvetica, Roboto, Arial, sans-serif;
+$font-family-main-bold: 'HarmoniaSansProCyr-Bold', Helvetica, Roboto, Arial, sans-serif;
+$font-family-main-black: 'HarmoniaSansProCyr-Black', Helvetica, Roboto, Arial, sans-serif;
+$font-family-main-italic: 'HarmoniaSansProCyr-Italic', Helvetica, Roboto, Arial, sans-serif;
+$font-family-main-light: 'HarmoniaSansProCyr-Light', Helvetica, Roboto, Arial, sans-serif;
+$font-family-main-semiBd: 'HarmoniaSansProCyr-SemiBd', Helvetica, Roboto, Arial, sans-serif;
+
 
 // 1. Global
 // ---------
@@ -65,7 +108,7 @@ $light-gray: #e6e6e6;
 $medium-gray: #cacaca;
 $dark-gray: #8a8a8a;
 $black: #0a0a0a;
-$white: #fefefe;
+$white: #fff;
 $body-background: $white;
 $body-font-color: $black;
 $body-font-family: $font-family-main;
@@ -100,7 +143,7 @@ $breakpoint-classes: (small medium large);
 $grid-row-width: $global-width;
 $grid-column-count: 12;
 $grid-column-gutter: (
-  small: 20px,
+small: 20px,  
   medium: 30px,
 );
 $grid-column-align-edge: true;
