@@ -1,0 +1,29 @@
+- var footerLinks1 = ['contact us','support','our feed']
+- var footerLinks2 = ['our privacy','terms and conditions','about us']
+- var footerLinks3 = ['join us','live support']
+
+footer.p-footer
+  div.container.clearfix
+    div.p-footer__left.float-left
+      a.logo(href="#")
+        img.logo__img(src="images/logo.png" alt="Logo")
+      p.copyright shopy c 2017
+        
+    div.p-footer__right.float-right
+      div.footer-nav
+        ul.u-list
+          each link in footerLinks1
+            li.u-list__item.footer-nav__item
+              a.footer-nav__link(href="#")= link
+        ul.u-list
+          each link in footerLinks2
+            li.u-list__item.footer-nav__item
+              a.footer-nav__link(href="#")= link
+        ul.u-list
+          each link in footerLinks3
+            li.u-list__item.footer-nav__item
+              a.footer-nav__link(href="#")= link
+              
+      div.payment
+        p.payment__text Payment Methods
+        a.payment__link(href="#")

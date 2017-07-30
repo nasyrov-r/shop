@@ -1,0 +1,81 @@
+.p-footer
+  padding:
+    top: 40px
+    bottom: 40px
+  +breakpoint(large)
+    padding:
+      top: 88px
+      bottom: 80px
+  
+  .logo
+    margin-bottom: 14px
+    
+  &__left
+  
+    +breakpoint(medium)
+      padding-left: 30px
+  
+  &__right
+
+.footer-nav
+  height: 85px
+  display: none
+  vertical-align: top
+  padding-right: 18px
+  
+  +breakpoint(large)
+    display: inline-block
+  
+  .u-list
+    display: inline-block
+    vertical-align: top
+    width: 176px
+    margin-top: -10px
+  
+  &__item
+    color: #28313b
+    transition: color .3s
+    list-style: none 
+    
+    &::before
+      content: ''
+      display: inline-block
+      line-height: 30px
+      width: 4px
+      height: 4px
+      background: #28313b
+      margin: 
+        right: 8px
+      vertical-align: middle
+      border-radius: 50%
+    
+    &:hover::before,
+    &--active::before
+      background: map-get($main-colors, orange)
+    
+    &--active .footer-nav__link
+      color: map-get($main-colors, orange)
+      
+  &__link
+    color: inherit
+    transition: color .3s
+    font-size: 14px
+    line-height: 30px
+    
+    &:hover
+      color: map-get($main-colors, orange)
+
+.payment
+  display: inline-block
+  vertical-align: top
+  width: 170px
+  
+  &__text
+    font-size: 16px
+    line-height: 30px
+    color: map-get($main-colors, orange)
+    font-family: $font-family-main-bold
+  
+  &__link
+    @extend .icon-payment-images
+    display: inline-block
