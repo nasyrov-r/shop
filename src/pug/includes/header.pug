@@ -1,17 +1,44 @@
 // page HEADER
 
 - var socials = ['twitter', 'facebook', 'google-plus', 'instagram']
+- var navLinks = ['Home', 'Products', 'Hot Deals', 'About', 'Contact']
+
 
 header.p-header
-  div.h-top.container.clearfix
-    div.h-top__left.float-left
-      a.text-icon.text-icon--mail(href="#") info@shopy.com
-      a.text-icon.text-icon--phone(href="#") 996 - 5553 - 453
-    div.h-top__right.social.float-right
-      each val in socials
-        a.social__link(href="#")
-          i.fa(class='fa-'+ val  aria-hidden="true")
+  div.h-top
+    div.container.clearfix
+      div.h-top__left.float-left
+        a.text-icon.text-icon--mail(href="#") info@shopy.com
+        a.text-icon.text-icon--phone(href="#") 996 - 5553 - 453
+      div.h-top__right.social.float-right
+        each val in socials
+          a.social__link(href="#")
+            i.fa(class='fa-'+ val  aria-hidden="true")
         
       
-  div.h-bottom.container
-
+  div.h-bottom
+    div.container.clearfix
+      div.top-bar-left.h-bottom__left
+        a.logo(href="#")
+          img.logo__img(src="images/logo.png" alt="Logo")
+          
+        ul.h-nav.js-header-nav.menu.accordion-menu(data-responsive-menu="accordion" role="tablist" aria-multiselectable="true")
+          each val in navLinks
+            li.h-nav__item(role="menuitem")
+              a.h-nav__link(href="#")= val
+    
+        
+      div.h-bottom__right.top-bar-right
+        div.user-menu
+          a.user-menu__icon.burger.js-header-nav-burger(href="#")
+            span.burger__line
+            span.burger__line
+            span.burger__line
+            
+          div.user-menu__icon.user-menu__icon--search
+            form.m-search
+              input.m-search__input(type="text" placeholder="Search")
+          
+          a.user-menu__icon.user-menu__icon--lk(href="#")
+          a.user-menu__icon.user-menu__icon--basket(href="#")
+            span.user-menu__icon-indx 2

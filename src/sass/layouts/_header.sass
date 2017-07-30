@@ -1,7 +1,7 @@
 .p-header
 
 .h-top
-  border-bottom: 1px solid rgba(map-get($main-colors, grey), .2) 
+  border-bottom: 1px solid rgba(map-get($main-colors, grey), .1) 
   height: 60px
   
   
@@ -18,3 +18,160 @@
   &__right
     padding-top: 23px
     line-height: 1
+
+.h-bottom
+  border-bottom: 1px solid rgba(map-get($main-colors, grey), .1) 
+  position: relative
+  padding: 
+    top: 40px
+    bottom: 40px
+
+  &__left
+  
+  &__right
+    padding-top: 8px
+  
+
+.logo
+  max-width: 120px
+  height: 40px
+  display: inline-block
+  vertical-align: top
+  text-align: center
+  
+  +breakpoint(medium)
+    margin-right: 20px
+  
+  +breakpoint(large)
+    margin-right: 80px
+  
+  
+  &__img
+    line-height: 120px
+    max-height: 120px
+
+.h-nav
+  +breakpoint(small)
+    position: absolute
+    top: 121px
+    left: 0
+    text-align: center
+    width: 100vw
+    background: $white
+    border-bottom: 1px solid rgba(map-get($main-colors, grey), .1) 
+  
+  +breakpoint(large)
+    display: inline-block !important
+    vertical-align: top
+    position: static
+    text-align: left
+    width: auto
+    border-bottom: none
+  
+  &__item
+    +breakpoint(small)
+      display: block !important
+    
+    +breakpoint(large)
+      display: inline-block !important
+  
+  &__link
+    color: #34404b !important
+    font-size: 16px !important
+    
+    &:hover,
+    &.active
+      color: map-get($main-colors, orange) !important
+      transition: all .3s
+
+.user-menu
+
+  &__icon
+    width: 24px
+    height: 22px
+    display: inline-block
+    vertical-align: top
+    cursor: pointer
+    text-align: center
+    margin-left: 15px
+    position: relative
+    
+    +breakpoint(medium)
+      margin-left: 32px
+    
+    &:first-child
+      margin-left: 0
+    
+    &::before
+      content: ''
+      display: inline-block
+      vertical-align: top
+      margin: 0 auto
+      line-height: 22px
+      
+  &__icon-indx
+    width: 18px
+    height: 18px
+    background-color: #34404b
+    color: white
+    font-size: 10px
+    line-height: 18px
+    display: inline-block
+    position: absolute
+    top: -16px
+    border-radius: 50%
+    left: 50%
+    transform: translateX(-50%)
+    
+.user-menu__icon
+
+  &--search
+    position: relative
+    
+    &::before
+      margin-top: 2px
+      @extend .icon-search
+    &:hover::before,
+    &.user-menu__icon--active::before
+      @extend .icon-search-a
+    
+  &--lk
+    &::before
+      @extend .icon-user
+    &:hover::before,
+    &.user-menu__icon--active::before
+      @extend .icon-user-a
+    
+  &--basket
+    &::before
+      @extend .icon-cart-ico
+      margin-top: 3px
+    &:hover::before,
+    &.user-menu__icon--active::before
+      @extend .icon-cart-ico-a
+
+
+.m-search
+  position: absolute
+  top: -5px 
+  right: 25px
+  
+  
+  
+  &:hover .m-search__input,
+  &__input:focus
+    width: 150px
+    z-index: 1
+    opacity: 1
+  
+  &__input
+    height: 30px
+    width: 0px
+    z-index: -2
+    opacity: 0
+    transition: all .3s
+    
+.user-menu__icon--search:hover .m-search__input
+  width: 150px
+  z-index: 1
+  opacity: 1
